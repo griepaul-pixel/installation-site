@@ -1,0 +1,4 @@
+Ping(ACCEPT)    all             all
+
+ACCEPT  all       fw:$ADMIN_LOCAL           	 tcp     24
+ACCEPT  all       fw:$ADMIN_LOCAL          	 tcp     80,443

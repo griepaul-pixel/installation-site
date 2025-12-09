@@ -1,0 +1,3 @@
+###############################################################################
+#ZONE   INTERFACE       BROADCAST       OPTIONS
+net     enp1s0            detect          tcpflags,nosmurfs,routefilter,logmartians

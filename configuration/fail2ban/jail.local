@@ -1,0 +1,54 @@
+[DEFAULT]
+# Durée de bannissement par défaut (en secondes) : 1 heure
+bantime = 3600 
+
+# Nombre maximum d'échecs avant bannissement
+maxretry = 5
+
+# Temps de recherche (en secondes) : 10 minutes
+findtime = 600
+
+# Adresse email de notification
+destemail = ${EMAIL}
+action = %(action_mwl)s
+
+# --- Jails Spécifiques ---
+
+# SSH Protection
+[sshd]
+enabled = true
+port = ssh
+logpath = %(sshd_log)s
+
+# Apache - Protection contre la Force Brute (Basic/Digest Auth)
+[apache-auth]
+enabled = true
+port = http,https
+logpath = %(apache_error_log)s
+
+# Apache - Protection contre les Scanners et les Mauvais Bots (erreurs 404/403)
+[apache-noscript]
+enabled = true
+port = http,https
+logpath = %(apache_error_log)s
+
+# Apache - Protection contre les requêtes massives (DoS léger)
+[apache-dos]
+enabled = true
+port = http,https
+logpath = %(apache_access_log)s
+maxretry = 30
+findtime = 300
+
+# Postfix - Protection de l'authentification SMTP (SASL)
+[postfix-sasl]
+enabled = true
+port = smtp,ssmtp,submission,465,587
+logpath = %(mail_log)s
+
+# MySQL/MariaDB - Protection contre la Force Brute
+[mysqld-auth]
+enabled = true
+port = 3306
+# Note: Vérifiez le chemin de votre fichier de log MySQL
+logpath = /var/log/mysql/error.log

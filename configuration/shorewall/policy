@@ -1,0 +1,6 @@
+###############################################################################
+#SOURCE         DEST            POLICY          LOG LEVEL       LIMIT:BURST
+$FW     all     ACCEPT
+# THE FOLLOWING POLICY MUST BE LAST
+all             all             REJECT          info
+
