@@ -2,7 +2,7 @@
 
 # --- Configuration ---
 # Le répertoire où vous voulez installer PrestaShop (par exemple, un nouveau dossier de site)
-INSTALL_DIR="/home/agathebonnet/prestashop"
+INSTALL_DIR="/data/prestashop"
 
 # L'URL du fichier zip de la dernière version de PrestaShop (vérifiez la dernière version sur le site officiel)
 #PRESTASHOP_URL="https://download.prestashop.com/download/releases/prestashop_edition_basic_version_9.0.1-1.0.zip"
@@ -27,11 +27,11 @@ cd "$INSTALL_DIR" || { echo "Erreur: Impossible d'entrer dans $INSTALL_DIR"; exi
 # 3. Télécharger le fichier ZIP
 echo "Téléchargement de PrestaShop depuis $PRESTASHOP_URL..."
 #sudo wget -O "$DOWNLOAD_FILE" "$PRESTASHOP_URL"
-mv /home/agathebonnet/prestashop_edition_basic_version_9.0.1-1.0.zip /home/agathebonnet/${DOWNLOAD_FILE}
+mv ${INSTALL_DIR}/prestashop_edition_basic_version_9.0.1-1.0.zip /home/agathebonnet/${DOWNLOAD_FILE}
 
 # 4. Décompresser le fichier ZIP
 echo "Décompression du fichier..."
-cd /home/agathebonnet/
+cd ${INSTALL_DIR}
 sudo unzip "$DOWNLOAD_FILE"
 
 # 5. Le fichier téléchargé est souvent un zip qui contient un autre zip.

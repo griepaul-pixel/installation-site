@@ -69,7 +69,7 @@ ls -al /snap/bin/certbot
 
 echo "✅ Installation et configuration de base terminées."
 
-CONFIG_PATH=/home/agathebonnet/installation/configuration
+CONFIG_PATH=/data/installation/configuration
 echo "Copie des fichiers de configuration shorewall"
 
 cp -ar ${CONFIG_PATH}/shorewall/* /etc/shorewall/

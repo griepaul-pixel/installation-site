@@ -2,3 +2,4 @@ Ping(ACCEPT)    all             all
 
 ACCEPT  all       fw:$ADMIN_LOCAL           	 tcp     24
 ACCEPT  all       fw:$ADMIN_LOCAL          	 tcp     80,443
+ACCEPT  net:140.82.112.0/20       fw:$ADMIN_LOCAL          	 tcp     9000
