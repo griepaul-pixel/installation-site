@@ -4,7 +4,7 @@ set -euo pipefail
 # --- Variables (modifie ici si besoin) ---
 USER_NAME="agathebonnet"
 GROUP_NAME="agathebonnet"
-SITE_DIR="/home/agathebonnet/site"
+SITE_DIR="/data/site"
 WEBHOOK_DIR="$SITE_DIR/webhooks"
 HOOKS_FILE="$WEBHOOK_DIR/hooks.json"
 GEN_SCRIPT="${SITE_DIR}/bash/generation/generation_site_test.sh"
@@ -59,7 +59,7 @@ cat > "$HOOKS_FILE" <<'EOF'
     "trigger-rule": {
       "match": {
         "type": "payload-hash-sha1",
-        "secret": "${WEBHOOK_SECRET}",
+        "secret": "f8wqogKR6GyE4nQsKzgv4VxgpTp9dt4T@kkEnX9xrAArVQ2",
         "parameter": {
           "source": "header",
           "name": "X-Hub-Signature"

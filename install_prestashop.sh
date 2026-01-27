@@ -27,7 +27,7 @@ cd "$INSTALL_DIR" || { echo "Erreur: Impossible d'entrer dans $INSTALL_DIR"; exi
 # 3. Télécharger le fichier ZIP
 echo "Téléchargement de PrestaShop depuis $PRESTASHOP_URL..."
 #sudo wget -O "$DOWNLOAD_FILE" "$PRESTASHOP_URL"
-mv ${INSTALL_DIR}/prestashop_edition_basic_version_9.0.1-1.0.zip /home/agathebonnet/${DOWNLOAD_FILE}
+mv ${INSTALL_DIR}/prestashop_edition_basic_version_9.0.1-1.0.zip ${INSTALL_DIR}/${DOWNLOAD_FILE}
 
 # 4. Décompresser le fichier ZIP
 echo "Décompression du fichier..."

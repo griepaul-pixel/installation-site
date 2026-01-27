@@ -3,8 +3,8 @@ set -Eeuo pipefail
 
 # ---------- Config ----------
 BACKUP_FOLDER="/data/installation/backup"
-PRESTA_SRC="/home/agathebonnet/prestashop"
-SITE_SRC="/home/agathebonnet/site"
+PRESTA_SRC="/data/prestashop"
+SITE_SRC="/data/site"
 
 BACKUP_PRESTA="${BACKUP_FOLDER}/prestashop"
 BACKUP_SITE="${BACKUP_FOLDER}/site"
